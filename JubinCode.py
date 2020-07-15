@@ -40,7 +40,7 @@ model.compile(loss=keras.losses.categorical_crossentropy, optimizer=keras.optimi
 
 epochs=2
 batch_size=100
-model.fit(train_X, train_Y_one_hot, batch_size, epochs)
+model_fit = model.fit(train_X, train_Y_one_hot, batch_size, epochs)
 
 test_loss, test_acc = model.evaluate(test_X, test_Y_one_hot)
 print('Test loss', test_loss)
@@ -51,5 +51,11 @@ print(np.argmax(np.round(predictions[0])))
 
 plt.imshow(test_X[0].reshape(28, 28), cmap = plt.cm.binary)
 plt.show()
+
+acc = model_fit.history['accuracy']
+model_fit.history['accuracy'][1]
+with open('accuracy.txt', 'w') as f:
+    f.write(str(acc[1]))
+#model.save('mlopsmodel.h1')
 
 
