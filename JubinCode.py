@@ -53,9 +53,9 @@ print(np.argmax(np.round(predictions[0])))
 plt.imshow(test_X[0].reshape(28, 28), cmap = plt.cm.binary)
 plt.show()
 
-acc = model_fit.history['accuracy']
 
-f = open("accuracy.txt","W+")
+
+f = open("accuracy.txt","w+")
 f.write(str(test_acc))
 f.close()
 
