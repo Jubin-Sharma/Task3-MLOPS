@@ -38,8 +38,8 @@ model.add(Activation('softmax'))
 
 model.compile(loss=keras.losses.categorical_crossentropy, optimizer=keras.optimizers.Adam(),metrics=['accuracy'])
 
-epochs=2
-batch_size=100
+epochs=0
+batch_size=20
 model_fit = model.fit(train_X, train_Y_one_hot, batch_size, epochs)
 
 test_loss, test_acc = model.evaluate(test_X, test_Y_one_hot)
@@ -53,9 +53,16 @@ plt.imshow(test_X[0].reshape(28, 28), cmap = plt.cm.binary)
 plt.show()
 
 acc = model_fit.history['accuracy']
+
+
+/*
 model_fit.history['accuracy'][1]
 with open('accuracy.txt', 'w') as f:
     f.write(str(acc[1]))
 model.save('mlopsmodel.h1')
+*/
+f = open("accuracy.txt","w+")
+f.write(str(acc))
+f.close()
 
 
