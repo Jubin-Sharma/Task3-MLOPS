@@ -56,6 +56,6 @@ acc = model_fit.history['accuracy']
 model_fit.history['accuracy'][1]
 with open('accuracy.txt', 'w') as f:
     f.write(str(acc[1]))
-#model.save('mlopsmodel.h1')
+model.save('mlopsmodel.h1')
 
 
