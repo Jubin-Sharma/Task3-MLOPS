@@ -54,15 +54,12 @@ plt.show()
 
 acc = model_fit.history['accuracy']
 
-
-/*
-model_fit.history['accuracy'][1]
-with open('accuracy.txt', 'w') as f:
-    f.write(str(acc[1]))
-model.save('mlopsmodel.h1')
-*/
-f = open("accuracy.txt","w+")
-f.write(str(acc))
+f = open("accuracy.txt","W+")
+f.write(str(test_acc))
 f.close()
+
+os.system("mv /accuracy.txt /root/mlopst3d")
+
+
 
 
