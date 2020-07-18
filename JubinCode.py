@@ -6,6 +6,7 @@ from keras.models import Sequential
 from keras.utils import to_categorical
 import numpy as np
 import matplotlib.pyplot as plt
+import os
 
 (train_X,train_Y), (test_X,test_Y) = fashion_mnist.load_data()
 
