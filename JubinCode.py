@@ -59,8 +59,4 @@ f = open("accuracy.txt","w+")
 f.write(str(test_acc))
 f.close()
 
-os.system("mv /root/mlopst3d/accuracy.txt /root/mlopst3")
-
-
-
 
