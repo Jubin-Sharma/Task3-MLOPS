@@ -58,4 +58,4 @@ f.write(str(test_acc))
 f.close()
 
 
-os.system("mv /root/mlopst3d/accuracy.txt /root/mlopst3")
+os.system("mv /accuracy.txt /root/mlopst3d")
